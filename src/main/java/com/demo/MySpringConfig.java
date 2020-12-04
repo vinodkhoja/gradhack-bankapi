@@ -18,9 +18,9 @@ public class MySpringConfig {
 		System.out.println("Data source created");
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3307/hsbc_bank?useSSL=false");
-        dataSource.setUsername("root");
-        dataSource.setPassword("root123");
+        dataSource.setUrl("jdbc:mysql://database-1.cpask6b0kwly.us-east-2.rds.amazonaws.com/hsbc_bank?useSSL=false");
+        dataSource.setUsername("admin");
+        dataSource.setPassword("root12345");
         System.out.println("connection done");
         return dataSource;
 	}
