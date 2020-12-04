@@ -19,6 +19,7 @@ public class AccountRestController {
 	AccountService accountService = new AccountServiceImpl();
 	@Autowired
 	TransactionService transactionService = new TransactionServiceImpl();
+	@CrossOrigin
 	@PostMapping("/authenticateuser")
 	public String createPost(@RequestParam("username") String username,@RequestParam("password") String passwordUser,@RequestParam("accountnumber") String accountNumber){
 		Account account = new Account(username,passwordUser,accountNumber);
